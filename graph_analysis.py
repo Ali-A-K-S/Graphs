@@ -62,24 +62,24 @@ PRESS '1' to Display Nodes Lists of the Graph
 optn= input("ENTER your Option-> ")
 
 if optn =='1':
-    print("Listed Nodes-> ",list(G.nodes))
+    print("Listed Nodes-> ",list(G.nodes))                  #listing graph's nodes
 elif optn=='2':
-    print("Listed Edges-> ",list(G.edges))
+    print("Listed Edges-> ",list(G.edges))                  #listing graph's edges
 elif optn=='3':
-    print("Total Connected Components-> ", nx.number_connected_components(G))
+    print("Total Connected Components-> ", nx.number_connected_components(G))       #finding number of connected components of the graph
 elif optn=='4':
     print("Listed Connected Components->")
     for components in nx.connected_components(G):
         print(components)
 elif optn=='5':
-    print("Incidence Matrix-> \n", nx.incidence_matrix(G).todense())
+    print("Incidence Matrix-> \n", nx.incidence_matrix(G).todense())            #printing incidence matrix of the graph
 elif optn=='6':
-    vertex= input("ENTER a Node(from A-O) Name to View its Degree-> ")
+    vertex= input("ENTER a Node(from A-O) Name to View its Degree-> ")          #finding degree of a node
     print("Degree of ",vertex,"-> ", G.degree[vertex])
 elif optn=='7':
-    print("Total Edges-> ", G.size())
+    print("Total Edges-> ", G.size())                                   #printing total number of edges in a graph 
 elif optn=='8':
-    nx.draw(G, with_labels = True, node_color ="black", font_color="white")
+    nx.draw(G, with_labels = True, node_color ="black", font_color="white")         #visualizing the graph
     plt.show()
 elif optn=='9':
     print('''
